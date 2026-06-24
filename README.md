@@ -24,6 +24,47 @@ Built using **Python Flask**, **Leaflet.js maps**, **Chart.js analytics**, and a
 
 ## 🏙️ System Architecture
 > **Industry-level IoT + AI web platform for intelligent urban waste monitoring, alert management, and route optimization — built for Pune Metropolitan Region.**
+> ┌────────────────────────────────────────────────────────────────────────┐
+│                        PHYSICAL / SIMULATION LAYER                     │
+│  [Ultrasonic Sensors] ──(Telemetry Data)──► [Time-Seeded Logic Engine] │
+└───────────────────────────────────┬────────────────────────────────────┘
+                                    │ (JSON Payloads)
+                                    ▼
+┌────────────────────────────────────────────────────────────────────────┐
+│                        MIDDLEWARE & INGESTION LAYER                    │
+│                      [Node-RED Visual Flow Engine]                      │
+│        ┌──────────────────────────┴──────────────────────────┐         │
+│        ▼ (Payload Validation)                                ▼         │
+│ [Data Parsing / Transforms]                     [MQTT/REST Broker Router]
+└───────────────────────────────────┬────────────────────────────────────┘
+                                    │ 
+                                    │ HTTP POST (JSON Payload)
+                                    ▼ 
+┌────────────────────────────────────────────────────────────────────────┐
+│                      CORE FLASK BACKEND ENGINE                         │
+│                                                                        │
+│   ┌────────────────────────────────────────────────────────────────┐   │
+│   │               📥 REST API INGESTION ENDPOINTS                  │   │
+│   │  • POST /api/bins/<id>/update  • GET /api/bins                 │   │
+│   │  • GET /api/route              • GET /api/stats                │   │
+│   └───────────────────────────────┬────────────────────────────────┘   │
+│                                   │ (Internal State Routing)           │
+│                                   ▼                                    │
+│        ┌──────────────────────────┴──────────────────────────┐         │
+│        ▼                                                     ▼         │
+│ [Routing Logic Engine]                            [Jinja2 Render Node] │
+│ (Nearest-Neighbour + Haversine)                    (Dynamic Views UI)  │
+└───────────────────────────────────┬────────────────────────────────────┘
+                                    │ (Data Streams)
+                                    ▼
+┌────────────────────────────────────────────────────────────────────────┐
+│                           PRESENTATION LAYER                           │
+│                            [Client Browser]                            │
+│        ┌──────────────────────────┼──────────────────────────┐         │
+│        ▼                          ▼                          ▼         │
+│   [Leaflet.js]               [Chart.js]            [Responsive Grid]   │
+│ (Interactive Maps)       (Live KPI Dashboard)      (Bin Status Cards)  │
+└────────────────────────────────────────────────────────────────────────┘
 ---
 
 ## 🌟 Project Overview
