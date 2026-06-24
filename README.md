@@ -26,50 +26,30 @@ Built using **Python Flask**, **Leaflet.js maps**, **Chart.js analytics**, and a
 > **Industry-level IoT + AI web platform for intelligent urban waste monitoring, alert management, and route optimization — built for Pune Metropolitan Region.**
 
 >🛰️ 1. Physical / Simulation Layer
-Components: Ultrasonic Sensors (Simulated) ➔ Time-Seeded Logic Engine
-
-Data Payload: Generates raw localized distance telemetry parameters based on a time-seeded hourly drift matrix.
+- Components: Ultrasonic Sensors (Simulated) ➔ Time-Seeded Logic Engine
+- Data Payload: Generates raw localized distance telemetry parameters based on a time-seeded hourly drift matrix.
 
 >🔀 2. Middleware & Ingestion Layer
-Components: Node-RED Visual Flow Engine ➔ MQTT/REST Broker Router
-
-Operations: Performs immediate packet validation, strips noise, parses fields, and transforms raw structures into clean JSON shapes.
+- Components: Node-RED Visual Flow Engine ➔ MQTT/REST Broker Router
+- Operations: Performs immediate packet validation, strips noise, parses fields, and transforms raw structures into clean JSON shapes.
 
 >📥 3. Core Flask Backend Engine (REST API Gateway)
-System Handshake Interface: Node-RED triggers a secure outward HTTP POST request containing structural payloads directly into the framework's native REST endpoints:
-
-POST /api/bins/<id>/update — Ingests active telemetry vectors from Node-RED.
-
-GET /api/bins — Distributes current global bin inventory configurations.
-
-GET /api/route — Evaluates and fires computed coordinate matrices.
-
-GET /api/stats — Compiles macro-level city metrics.
+- System Handshake Interface: Node-RED triggers a secure outward HTTP POST request containing structural payloads directly into the framework's native REST endpoints:
+- POST /api/bins/<id>/update — Ingests active telemetry vectors from Node-RED.
+- GET /api/bins — Distributes current global bin inventory configurations.
+- GET /api/route — Evaluates and fires computed coordinate matrices.
+- GET /api/stats — Compiles macro-level city metrics.
 
 Core Systems Controllers:
-
-Routing Logic Engine — Drops active sensor parameters into a Greedy Nearest-Neighbour routine using the Haversine Formula.
-
-Jinja2 Render Node — Hydrates UI components with updated server-side state parameters.
+- Routing Logic Engine — Drops active sensor parameters into a Greedy Nearest-Neighbour routine using the Haversine Formula.
+- Jinja2 Render Node — Hydrates UI components with updated server-side state parameters.
 
 >📊 4. Presentation Layer
 Components: Client Browser Engine
-
 Framework Bundles:
-
-Leaflet.js — Draws animated vector polylines over physical Pune Map coordinate points.
-
-Chart.js — Compiles structural metrics into multi-axis line, bar, pie, and doughnut graphs.
-
-Responsive UI Grid — Repaints dynamic, color-coded threshold notification cards across tracking panels.
----
-
-## 🌟 Project Overview
-
-The **Smart Waste Management System (SWMS)** is an advanced full-stack web application that simulates a real-world IoT-powered waste monitoring platform for metropolitan cities. It integrates real-time bin fill-level tracking, AI-based route optimization, live analytics, and a REST API for IoT device connectivity.
-
-Built using **Python Flask**, **Leaflet.js maps**, **Chart.js analytics**, and a **professional dark-sidebar UI**, this project demonstrates an end-to-end smart city solution aligned with **UN SDG 11 (Sustainable Cities)**.
-
+- Leaflet.js — Draws animated vector polylines over physical Pune Map coordinate points.
+- Chart.js — Compiles structural metrics into multi-axis line, bar, pie, and doughnut graphs.
+- Responsive UI Grid — Repaints dynamic, color-coded threshold notification cards across tracking panels.
 ---
 
 ## 📁 Folder Structure
