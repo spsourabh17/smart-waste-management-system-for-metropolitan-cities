@@ -24,17 +24,18 @@ Built using **Python Flask**, **Leaflet.js maps**, **Chart.js analytics**, and a
 
 ## 🏙️ System Architecture
 > **Industry-level IoT + AI web platform for intelligent urban waste monitoring, alert management, and route optimization — built for Pune Metropolitan Region.**
+
 >🛰️ 1. Physical / Simulation Layer
 Components: Ultrasonic Sensors (Simulated) ➔ Time-Seeded Logic Engine
 
 Data Payload: Generates raw localized distance telemetry parameters based on a time-seeded hourly drift matrix.
 
-🔀 2. Middleware & Ingestion Layer
+>🔀 2. Middleware & Ingestion Layer
 Components: Node-RED Visual Flow Engine ➔ MQTT/REST Broker Router
 
 Operations: Performs immediate packet validation, strips noise, parses fields, and transforms raw structures into clean JSON shapes.
 
-📥 3. Core Flask Backend Engine (REST API Gateway)
+>📥 3. Core Flask Backend Engine (REST API Gateway)
 System Handshake Interface: Node-RED triggers a secure outward HTTP POST request containing structural payloads directly into the framework's native REST endpoints:
 
 POST /api/bins/<id>/update — Ingests active telemetry vectors from Node-RED.
@@ -51,7 +52,7 @@ Routing Logic Engine — Drops active sensor parameters into a Greedy Nearest-Ne
 
 Jinja2 Render Node — Hydrates UI components with updated server-side state parameters.
 
-📊 4. Presentation Layer
+>📊 4. Presentation Layer
 Components: Client Browser Engine
 
 Framework Bundles:
