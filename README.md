@@ -40,7 +40,7 @@ Built using **Python Flask**, **Leaflet.js maps**, **Chart.js analytics**, and a
 - GET /api/route — Evaluates and fires computed coordinate matrices.
 - GET /api/stats — Compiles macro-level city metrics.
 
-Core Systems Controllers:
+>Core Systems Controllers:
 - Routing Logic Engine — Drops active sensor parameters into a Greedy Nearest-Neighbour routine using the Haversine Formula.
 - Jinja2 Render Node — Hydrates UI components with updated server-side state parameters.
 
