@@ -1,7 +1,29 @@
 # ♻️ Smart Waste Management System for Metropolitan Cities
 
+![Python](https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge&logo=python)
+![Flask](https://img.shields.io/badge/Flask-3.1-black?style=for-the-badge&logo=flask)
+![Leaflet](https://img.shields.io/badge/Leaflet.js-Maps-green?style=for-the-badge&logo=leaflet)
+![Node-RED](https://img.shields.io/badge/Node--RED-Flows-8F0000?style=for-the-badge&logo=nodered&logoColor=white)
+![Chart.js](https://img.shields.io/badge/Chart.js-Analytics-FF6384?style=for-the-badge&logo=chartdotjs)
+![IoT Simulation](https://img.shields.io/badge/IoT-Simulated%20Sensors-orange?style=for-the-badge&logo=internetofthings)
+![Status](https://img.shields.io/badge/Project-Production%20Ready-success?style=for-the-badge)
+
+![Visitors](https://visitor-badge.laobi.icu/badge?page_id=spsourabh17.smart-waste-management-system-for-metropolitan-cities)
+
 > **Industry-level IoT + AI web platform for intelligent urban waste monitoring, alert management, and route optimization — built for Pune Metropolitan Region.**
 
+---
+
+## 🌟 Project Overview
+
+The **Smart Waste Management System (SWMS)** is an advanced full-stack web application that simulates a real-world IoT-powered waste monitoring platform for metropolitan cities. It integrates real-time bin fill-level tracking, AI-based route optimization, live analytics, and a REST API for IoT device connectivity.
+
+Built using **Python Flask**, **Leaflet.js maps**, **Chart.js analytics**, and a **professional dark-sidebar UI**, this project demonstrates an end-to-end smart city solution closely aligned with **UN SDG 11 (Sustainable Cities)**.
+
+---
+
+## 🏙️ System Architecture
+> **Industry-level IoT + AI web platform for intelligent urban waste monitoring, alert management, and route optimization — built for Pune Metropolitan Region.**
 ---
 
 ## 🌟 Project Overview
